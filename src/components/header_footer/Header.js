@@ -1,7 +1,7 @@
 import React from "react";
 import {AppBar} from '@mui/material';
 import { Toolbar, IconButton } from "@mui/material";
-import SideDrawer from "../SideDrawer";
+import SideDrawer from "./SideDrawer";
 import { useState, useEffect } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 const Header = () => {
