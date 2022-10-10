@@ -1,5 +1,5 @@
 import { SwipeableDrawer, Drawer, List, ListItem } from "@mui/material";
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const SideDrawer =(props) => {
     
@@ -15,6 +15,7 @@ const SideDrawer =(props) => {
             {item.value}
         </ListItem>
     )
+
     return(
         <Drawer
         anchor="right"

@@ -9,13 +9,25 @@ const Header = () => {
     const toggleDrawer=(value)=>{
         setDrawerOpen(value)
     }
+    const [headerSroll, setHeaderScroll] = useState(false)
+    const handleScroll =() =>{
+        if (window.scrollY >0){
+            setHeaderScroll(true)
+        }
+        else{
+            setHeaderScroll(false)
+        }
+    }
+    useEffect(() =>{
+        window.addEventListener('scroll', handleScroll)
+    },[])
     return(
 
 
         <AppBar 
             position="fixed" 
             style={{
-                backgroundColor: '#2f2f2f',
+                backgroundColor: headerSroll ? '#2f2f2f' : 'transparent',
                 boxShadow: 'none',
                 padding: '10px 0px'
             }}
