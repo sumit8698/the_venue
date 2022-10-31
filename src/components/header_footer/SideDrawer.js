@@ -18,16 +18,17 @@ const SideDrawer =(props) => {
 
     return(
         <Drawer
-        anchor="right"
-        open = {props.open}
-        onClose= {()=> props.onClose(false)}
+            anchor={"right"}
+            open={props.open}
+            onClose={()=> props.onClose(false)}
         >
-            <List component = "nav">{
-            links.map((item)=> renderItem(item) )}
-
+            <List component="nav">
+                { links.map((item)=> renderItem(item) )}
+                
             </List>
+        </Drawer>
+    )
 
-    </Drawer>
-);
 }
+
 export default SideDrawer;
